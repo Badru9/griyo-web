@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"); */
+
+:root {
+  --color-primary: #0b192c;
+  --color-smokewhite: #f5f5f5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: "Urbanist", sans-serif;
+}
+
+/* body {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+} */
+
+main {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.nav-wrapper {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  box-shadow: 2px 2px 2px 2px solid black;
+  position: relative;
+}
+
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1.2rem;
+  padding-block: 0.8rem;
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-smokewhite);
+  color: var(--color-smokewhite);
+}
+
+.company-information {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-name {
+  font-size: 1.2rem;
+}
+
+.company-address {
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.company-address > h4 {
+  font-size: 0.7rem;
+}
+
+.menu-wrapper {
+  width: max-content;
+}
+
+.menu-wrapper > ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu-wrapper > ul > li {
+  list-style: none;
+}
+
+.menu-wrapper > ul > li > a {
+  color: var(--color-smokewhite);
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.menu-wrapper > ul > li:hover > a {
+  opacity: 1;
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -10;
+  filter: blur(0.9px);
+  user-select: none;
+}
+
+.title-wrapper {
+  padding-inline: 3rem;
+  padding-block: 2rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title-wrapper > h1 {
+  /* color: var(--color-smokewhite); */
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--color-smokewhite);
+  font-size: 6rem;
+}
+
+.title-wrapper > p {
+  color: var(--color-smokewhite);
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+.btn-learn {
+  width: fit-content;
+  padding-inline: 15px;
+  padding-block: 5px;
+  border-radius: 0.7rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2rem;
+}
