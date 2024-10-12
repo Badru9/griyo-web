@@ -10,7 +10,9 @@
 //     : (showModal.style.display = "none");
 // });
 
-const url = 'https://pokeapi.co/api/v2/pokemon';
+const tableBody = document.querySelector(".table-body");
+
+const url = "https://pokeapi.co/api/v2/pokemon";
 
 let pokemons = [];
 
@@ -23,8 +25,44 @@ const getPokemon = async () => {
   pokemons.length < 1 ? pokemons.push(data.results) : null;
 };
 
+const dataMahasiswa = [
+  {
+    id: 1,
+    nama: "Mohammad Badrujaman",
+    nim: "2206169",
+  },
+  {
+    id: 2,
+    nama: "Dzulkifli",
+    nim: "2206128",
+  },
+  {
+    id: 3,
+    nama: "Irpan",
+    nim: "2206120",
+  },
+];
+
+async function getDataMahasiswa() {
+  dataMahasiswa.forEach((item, index) => {
+    tableBody.insertAdjacentHTML(
+      "beforeend",
+
+      `<tr key='${index}'>
+        <td>${item.id}</td>
+        <td>${item.nama}</td>
+        <td>${item.nim}</td>
+      </tr>`
+    );
+  });
+}
+
 function learnMore() {
-  getPokemon();
+  // getPokemon();
+
+  getDataMahasiswa();
+
+  console.log(tableBody);
 
   console.log(pokemons);
 }
